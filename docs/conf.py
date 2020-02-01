@@ -207,9 +207,9 @@ def generate_doxygen_xml(app):
         output = '\n'.join([i.decode('utf-8') if is_py3 else i
                             for i in (stdout, stderr) if i is not None])
         if process.returncode != 0:
-            raise RuntimeError(output)
+            raise RuntimeError("not ok c")
         else:
-            print(output)
+            print("ok c")
     except BaseException as e:
         raise Exception("An error has occurred while executing Doxygen\n" + str(e))
 
@@ -254,9 +254,9 @@ def generate_r_docs(app):
         stdout, stderr = process.communicate(commands)
         output = '\n'.join([i for i in (stdout, stderr) if i is not None])
         if process.returncode != 0:
-            raise RuntimeError(output)
+            raise RuntimeError("not ok r")
         else:
-            print(output)
+            print("ok r")
     except BaseException as e:
         raise Exception("An error has occurred while generating documentation for R-package\n" + str(e))
 
