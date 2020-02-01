@@ -236,7 +236,7 @@ def generate_r_docs(app):
     /home/docs/.conda/bin/conda install -q -y -n r_env -c conda-forge \
         r-pkgdown=1.3.0=r35h6115d3f_1001 \
         r-roxygen2=6.1.1=r35h0357c0b_1001
-    source /home/docs/.conda/bin/activate r_env
+    /home/docs/.conda/bin/conda activate r_env
     export TAR=/bin/tar
     cd {0}
     sed -i'.bak' '/# Build the package (do not touch this line!)/q' build_r.R
